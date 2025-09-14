@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PanaderíaPanadería Don Corleone - Tienda Online</title>
+  <link rel="stylesheet" href="estiloPanaderiCorleone.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Panadería Don Corleone</h1>
+    <p>Productos frescos todos los días, ¡haz tu pedido ahora!</p>
+    <nav>
+      <ul>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#pedido">Hacer Pedido</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO VIDEO -->
+  <section class="hero">
+    <video autoplay muted loop>
+      <source src="amasando.mp4" type="video/mp4">
+       <a href="https://pixabay.com/es/users/sodainua-21076134/?utm_source=link-attribution&utm_medium=referral&utm_campaign=video&utm_content=75700">sodainua</a> de <a href="https://pixabay.com/es//?utm_source=link-attribution&utm_medium=referral&utm_campaign=video&utm_content=75700">Pixabay</a>
+      Tu navegador no soporta video.
+    </video>
+   
+    <div class="overlay">
+      <h2>Bienvenido a Panadería Don Corleone<br>Elige tus productos favoritos</h2>
+    </div>
+  </section>
+
+  <main>
+
+    <!-- SECCIÓN PRODUCTOS -->
+    <section id="productos">
+      <h2>Productos Destacados</h2>
+      <p>Mira nuestros productos frescos y deliciosos.</p>
+
+      <!-- Tabla de productos -->
+      <table>
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th>Descripción</th>
+            <th>Precio</th>
+            <th>Disponibilidad</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Pan Integral</td>
+            <td>Pan saludable hecho con harina integral</td>
+            <td>$3.50</td>
+            <td>Disponible</td>
+          </tr>
+          <tr>
+            <td>Croissant de Chocolate</td>
+            <td>Delicioso croissant relleno de chocolate</td>
+            <td>$2.00</td>
+            <td>Disponible</td>
+          </tr>
+          <tr>
+            <td>Pan de Molde</td>
+            <td>Perfecto para sandwiches y tostadas</td>
+            <td>$2.50</td>
+            <td>Pocas unidades</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Tarjetas de productos con imágenes para móviles -->
+      <div class="product-cards" style="margin-top:2rem;">
+        <div class="card">
+          <img src="pan.jpg" alt="Pan  fresco">
+          <h3>Pan Integral</h3>
+          <p>$3.50</p>
+        </div>
+        <div class="card">
+          <img src="croasant.jpg" alt="Croissant de chocolate">
+          <h3>Croissant de Chocolate</h3>
+          <p>$2.00</p>
+        </div>
+        <div class="card">
+          <img src="empanada.jpg" alt="Empanada">
+          <h3>Pan de Molde</h3>
+          <p>$2.50</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN PEDIDO -->
+    <section id="pedido">
+      <h2>Hacer tu pedido</h2>
+      <p>Puedes hacer tu pedido de varias formas:</p>
+      <ul>
+        <li>Llamada telefónica: <a href="tel:+123456789">+1 234 567 89</a></li>
+        <li>Mensaje de WhatsApp: <a href="https://wa.me/123456789">Enviar WhatsApp</a></li>
+      </ul>
+
+      <!-- Botón simulado de pago -->
+      <a href="#" class="btn">Pagar con Tarjeta</a>
+
+      <!-- Formulario de dirección -->
+      <div style="margin-top:1rem;">
+        <label for="direccion">Ingresa tu dirección para entrega:</label>
+        <input type="text" id="direccion" name="direccion" placeholder="Calle, número, ciudad">
+      </div>
+    </section>
+
+    <!-- SECCIÓN CONTACTO -->
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>¿Tienes preguntas? Envíanos un mensaje o llama directamente.</p>
+      <p>Horario: Lunes a Sábado 7am - 8pm</p>
+    </section>
+<details>
+  <summary>Ver ingredientes del Pan Integral</summary>
+  <ul>
+    <li>Harina integral</li>
+    <li>Agua</li>
+    <li>Levadura</li>
+    <li>Sal</li>
+  </ul>
+</details>
+<aside>
+  <button id="openDialog">Ver promoción</button>
+
+<dialog id="promoDialog">
+  <h3>Promoción del día</h3>
+  <p>Compra 2 panes y recibe un croissant gratis.</p>
+  <button id="closeDialog">Cerrar</button>
+</dialog>
+</aside>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025  Panadería Don Corleone. Todos los derechos reservados.</p>
+    <p>Diseñado por:Dubal Varillas con HTML5 moderno, video e imágenes para mejor experiencia visual.</p>
+  </footer>
+
+</body>
+
+
+<script src="appanaderiaCorleone.js"></script>
+
+</html>

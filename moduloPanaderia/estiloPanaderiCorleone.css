@@ -1,0 +1,142 @@
+
+    /* Estilos básicos para que luzca moderno y responsivo */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header, footer {
+      background-color: #f4c542;
+      color:#333333;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0 0 0;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      padding: 2rem;
+    }
+    section {
+      margin-bottom: 3rem;
+    }
+    /* Hero video */
+    .hero {
+      position: relative;
+      height: 400px;
+      overflow: hidden;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+    }
+    .hero video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .hero .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+    }
+    /* Tabla productos */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    th, td {
+      padding: 0.75rem 1rem;
+      text-align: left;
+    }
+    thead {
+      background-color: #f3f3f3;
+    }
+    tbody tr:hover {
+      background-color: #fff3e0;
+    }
+    /* Tarjetas de productos para móviles */
+    .product-cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media(min-width: 600px){
+      .product-cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media(min-width: 900px){
+      .product-cards {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .card {
+      background-color: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .card h3 {
+      margin: 0.5rem 0;
+    }
+    .card p {
+      margin: 0.25rem 0 0.75rem 0;
+      color: #555;
+    }
+    /* Botón */
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background-color: #4CAF50;
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      margin-top: 0.5rem;
+    }
+    .btn:hover {
+      background-color: #45a049;
+    }
+    /* Formulario de dirección */
+    input[type="text"] {
+      width: 100%;
+      padding: 0.75rem;
+      margin-top: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+ 
