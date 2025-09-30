@@ -1,0 +1,75 @@
+header h1 {
+    color: brown;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    font-size: 2.5rem;
+    padding: 1rem 0;
+}
+
+.contenedorSomos {
+    background: linear-gradient(135deg, #f5e9da 0%, #ffe4c4 100%);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.25);
+    border-radius: 20px;
+    padding: 2rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin: 2rem auto;
+}
+
+.contenedorSomos_div {
+    display: flex;
+    flex-direction: row; /* asegura que estén lado a lado */
+    align-items: flex-start; /* mejor alineación para texto e imagen */
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    gap: 2rem;
+    /* ...puedes agregar padding si lo deseas... */
+}
+
+.contenedorSomos_imagen {
+    width: 50vw;           /* antes 40vw */
+    max-width: 600px;      /* antes 400px */
+    min-width: 250px;      /* antes 200px */
+    max-height: 800px;     /* antes 600px */
+}
+
+.contenedorSomos_imagen img {
+    width: 100%;
+    height: auto;          /* permite que crezca proporcionalmente */
+    max-height: 800px;     /* antes 600px */
+    display: block;
+    object-fit: contain;
+}
+
+.parrafoSomos {
+    text-align: justify;
+    width: 40vw;
+    max-width: 500px;
+    min-width: 200px;
+    font-size: 1.3rem; /* antes 1.1rem */
+    margin: 0 auto;
+}
+
+/* Responsive: apilar en columna en pantallas pequeñas */
+@media (max-width: 900px) {
+    .contenedorSomos_div {
+        flex-direction: column; /* solo en pantallas pequeñas */
+        gap: 1rem;
+        align-items: center;
+    }
+    .contenedorSomos_imagen,
+    .parrafoSomos {
+        width: 90vw;
+        max-width: 100%;
+        min-width: unset;
+    }
+    header h1 {
+        font-size: 2rem;
+        padding: 0.5rem 0;
+    }
+}

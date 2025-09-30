@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios Eléctricos Profesionales</title>
+    <link rel="stylesheet" href="etiloservpintar.css">
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <img src="multis.jpg" alt="Servicios profesionales de electricidad">
+        </div>
+        <nav>
+            <a href="principi.html" class="nav-btn">Inicio</a>
+            <h1>Bienvenido al área de Instalaciones y Reparaciones Eléctricas</h1>
+        </nav>
+    </header>
+    
+    <main>
+      <form id="solicitudForm" action="procesar.php" method="POST">
+        
+        <!-- Formulario de Instalación de Enchufes -->
+        <div id="contenedorEnchufes" class="service-grid">
+            <!-- Descripción -->
+            <div class="descripcion-enchufes">
+                <h4>Tipos de trabajos en enchufes más comunes:</h4>
+                <ul>
+                    <li><strong>Instalación Básica:</strong> Colocación de un enchufe sencillo en muro existente.</li>
+                    <li><strong>Con Ajuste de Cableado:</strong> Ideal cuando hay que extender líneas cortas.</li>
+                    <li><strong>Con Canaleta u Ocultamiento:</strong> Perfecto para un acabado estético y seguro.</li>
+                </ul>
+            </div>
+    
+            <!-- Imagen y Selectores -->
+            <figure>
+                <img src="enchufe.png" alt="Instalación de enchufes" width="387" height="239">
+                <figcaption>Instalación de Enchufes</figcaption>
+                
+                <select class="area-select" name="tipo_enchufe" id="tipo_enchufe" required>
+                    <option value="" disabled selected>-- Seleccione tipo de trabajo --</option>
+                    <option value="basico">Instalación básica</option>
+                    <option value="cableado">Con ajuste de cableado</option>
+                    <option value="canaleta">Con canaleta / ocultamiento</option>
+                </select>
+                
+                <select class="area-select" name="costo_enchufe" id="costo_enchufe" required>
+                    <option value="" disabled selected>-- Seleccione rango de costo --</option>
+                    <option value="facil">$30 - Sencillo</option>
+                    <option value="medio">$50 - Con ajuste de cables</option>
+                    <option value="dificil">$70 - Con ocultamiento</option>
+                </select>
+            </figure>
+        </div>
+        
+        <!-- Formulario de Instalación de Lámparas -->
+        <div id="contenedorLamparas" class="service-grid">
+            <!-- Descripción -->
+            <div class="descripcion-lampara">
+                <h4>Tipos de trabajos con lámparas:</h4>
+                <ul>
+                    <li><strong>Lámpara Sencilla:</strong> Ideal para dormitorios o salas pequeñas.</li>
+                    <li><strong>Con Soporte Adicional:</strong> Requiere montaje en techos altos o falsos techos.</li>
+                    <li><strong>Con Cableado Nuevo:</strong> Cuando no existe punto de luz y se debe crear.</li>
+                </ul>
+            </div>
+    
+            <!-- Imagen y Selectores -->
+            <figure>
+                <img src="electricidad.jpg" alt="Instalación de lámparas" width="387" height="239">
+                <figcaption>Instalación de Lámparas</figcaption>
+                
+                <select class="area-select" name="tipo_lampara" id="tipo_lampara" required>
+                    <option value="" disabled selected>-- Seleccione tipo de trabajo --</option>
+                    <option value="sencilla">Instalación sencilla</option>
+                    <option value="soporte">Con soporte adicional</option>
+                    <option value="cableado">Con cableado nuevo</option>
+                </select>
+                
+                <select class="area-select" name="costo_lampara" id="costo_lampara" required>
+                    <option value="" disabled selected>-- Seleccione rango de costo --</option>
+                    <option value="facil">$40 - Básica</option>
+                    <option value="medio">$70 - Con soporte</option>
+                    <option value="dificil">$100 - Con cableado</option>
+                </select>
+            </figure>
+        </div>
+        
+        <!-- Formulario de Mantenimiento Eléctrico -->
+        <div id="contenedorMantenimiento" class="service-grid">
+            <!-- Descripción -->
+            <div class="descripcion-mantenimiento">
+                <h4>Tipos de mantenimiento eléctrico:</h4>
+                <ul>
+                    <li><strong>Revisión General:</strong> Detección de problemas y pruebas de seguridad.</li>
+                    <li><strong>Ajustes Menores:</strong> Incluye cambio de fusibles o llaves térmicas.</li>
+                    <li><strong>Reparación de Circuitos:</strong> Ideal para fallas complejas en la instalación.</li>
+                </ul>
+            </div>
+    
+            <!-- Imagen y Selectores -->
+            <figure>
+                <img src="mantenimientoElectrico.jpg" alt="Mantenimiento eléctrico" width="387" height="239">
+                <figcaption>Mantenimiento Eléctrico</figcaption>
+                
+                <select class="area-select" name="tipo_mantenimiento" id="tipo_mantenimiento" required>
+                    <option value="" disabled selected>-- Seleccione tipo de mantenimiento --</option>
+                    <option value="general">Revisión general</option>
+                    <option value="ajustes">Con ajustes menores</option>
+                    <option value="circuitos">Con reparación de circuitos</option>
+                </select>
+                
+                <select class="area-select" name="costo_mantenimiento" id="costo_mantenimiento" required>
+                    <option value="" disabled selected>-- Seleccione rango de costo --</option>
+                    <option value="facil">$60 - General</option>
+                    <option value="medio">$90 - Ajustes menores</option>
+                    <option value="dificil">$150 - Circuitos</option>
+                </select>
+            </figure>
+        </div>
+        
+        <!-- Botón de envío -->
+        <div class="submit-container">
+            <button type="submit" id="enviarBtn">Solicitar Servicio</button>
+        </div>
+        
+      </form>
+    </main>
+</body>
+</html>

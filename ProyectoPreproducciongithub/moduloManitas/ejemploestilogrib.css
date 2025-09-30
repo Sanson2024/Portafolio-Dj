@@ -1,0 +1,216 @@
+/* Archivo: estilos.css */
+
+body {
+    margin: 0%;
+    padding: 0%;
+    font-family: Arial, sans-serif;
+  }
+  
+  .FatherDiv {
+    display: grid;
+    grid-template-areas:
+      "cabecera"
+      "navegacion"
+      "titulo"
+      "servicios"
+      "formulario"
+      "footer";
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 40px;
+  }
+  
+  .cabecera {
+    grid-area: cabecera;
+    text-align:center;
+
+  }
+  
+  .FatherDiv nav {
+    grid-area: navegacion;
+  }
+  
+  .titulo {
+    grid-area: titulo;
+    text-align: center;
+    font-size: 2em;
+    color: darkblue;
+  }
+  
+  .FatherDiv section:nth-of-type(1) {
+    grid-area: servicios;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+  }
+  
+  .imgservicios {
+    padding: 15px;
+    margin: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    border-radius: 5px;
+  }
+  .imgservicios h2 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    padding: 0;
+    text-align: center;
+    min-height: 3em; /* espacio reservado para títulos de diferente longitud */
+    line-height: 1.4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+  }
+
+  #formularioPresupuesto {
+    grid-area: formulario;
+  }
+  
+  .pie {
+    grid-area: footer;
+    background-color: #eee;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .imgDiv {
+    width: 100%;
+    height: 180px; /* o el valor que prefieras */
+    object-fit: cover;
+    border-radius: 5px;
+    display: block;
+    overflow: hidden;
+    margin: 0 auto;
+    transition: transform 0.18s cubic-bezier(0.4,0,0.2,1), box-shadow 0.18s cubic-bezier(0.4,0,0.2,1);
+  }
+  .imgDiv:hover {
+    transform: scale(1.08) rotate(-2deg);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.25);
+  }
+  .img2{
+    width: 100%;
+    height: 600px;
+    margin-top: 15%;
+  }
+ 
+.img1 {
+  max-width: 300px;
+  height: 300px;
+  display: block;
+  object-fit: cover;
+}
+.imgservicios {
+    width: 100%;
+    overflow: hidden;
+  }
+  @media (max-width: 600px) {
+    .imgDiv {
+      max-height: 200px;
+      object-fit: contain;
+    }
+  }
+  figure {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    height: 200px;
+   
+  }
+  
+  figure img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  h2{
+    color: darkblue;
+  }
+  .btnboton, .btn-solicitar {
+    margin-left: 2vw; /* o margin-left: 80px; según tu diseño */;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #007ACC;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4%;
+    transition: background 0.2s, transform 0.18s;
+}
+/* Efecto hover para btnboton */
+.btnboton:hover, .btn-solicitar:hover {
+    background-color: #005fa3;
+    color: #fff;
+    transform: scale(1.07) translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0,122,204,0.18);
+}
+/*menu nuevo */
+  .offcanvas-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #222;
+    padding: 20px;
+    transition: left 0.3s ease-in-out;
+    z-index: 1000;
+  }
+  .offcanvas-menu ul {
+    list-style: none;
+    padding: 0;
+  }
+  .offcanvas-menu a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px 0;
+  }
+  .toggle-menu {
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: #222;
+    cursor: pointer;
+  }
+  .cerrar-menu {
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: white;
+    float: right;
+    cursor: pointer;
+  }
+  .menu-abierto {
+    left: 0;
+  }
+  footer.pie{
+    color: darkblue;
+    font-weight: 700;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  ul {
+    list-style: none;
+}
+/* despligue de tarifa de servicios*/
+.sublista {
+  max-height: 0;
+  overflow: hidden;
+  margin-left: 20px;
+  list-style-type: circle;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+  color: whitesmoke;
+}
+
+.sublista.visible {
+  max-height: 500px; /* ajusta según el contenido */
+  opacity: 1;
+}

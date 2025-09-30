@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios Profesionales de Pintura</title>
+   <link rel="stylesheet" href="etiloservpintar.css">
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <img src="multis.jpg" alt="Servicios profesionales de pintura y remodelación">
+        </div>
+        <nav>
+            <a href="principi.html" class="nav-btn">Inicio</a>
+            <h1>Bienvenido al área de Instalcion de Plardu</h1>
+        </nav>
+    </header>
+    
+    <main>
+<form id="solicitudFormPladur" action="procesar.php" method="POST">
+    <div id="contenedorPladur" class="service-grid">
+        <!-- Imagen y título del servicio -->
+        <figure>
+            <img src="plardu.jpg" alt="Instalación de pladur en oficina o negocio" width="387" height="239">
+            <figcaption>Instalación de Pladur en Oficina o Negocio</figcaption>
+            <select name="tipo_pladur" id="tipo_pladur" class="area-select" required>
+            <option value="" disabled selected>-- Seleccione una opción --</option>
+
+            <optgroup label="Pladur Estándar (BA)">
+                <option value="tabique_estandar">Tabique estándar - 25€ a 35€/m²</option>
+                <option value="trasdosado_estandar">Trasdosado estándar - 30€ a 40€/m²</option>
+                <option value="falso_techo_estandar">Falso techo estándar - 20€ a 30€/m²</option>
+            </optgroup>
+
+            <optgroup label="Pladur Hidrófugo (H1)">
+                <option value="tabique_hidrofugo">Tabique hidrófugo - 40€ a 55€/m²</option>
+                <option value="trasdosado_hidrofugo">Trasdosado hidrófugo - 45€ a 60€/m²</option>
+                <option value="falso_techo_hidrofugo">Falso techo hidrófugo - 35€ a 50€/m²</option>
+            </optgroup>
+
+            <optgroup label="Pladur Ignífugo (F)">
+                <option value="tabique_ignifugo">Tabique ignífugo - 45€ a 60€/m²</option>
+                <option value="trasdosado_ignifugo">Trasdosado ignífugo - 50€ a 65€/m²</option>
+                <option value="falso_techo_ignifugo">Falso techo ignífugo - 40€ a 55€/m²</option>
+            </optgroup>
+
+            <optgroup label="Pladur Acústico">
+                <option value="tabique_acustico">Tabique acústico - 45€ a 60€/m²</option>
+                <option value="trasdosado_acustico">Trasdosado acústico - 50€ a 65€/m²</option>
+                <option value="falso_techo_acustico">Falso techo acústico - 35€ a 50€/m²</option>
+            </optgroup>
+
+            <optgroup label="Pladur Alta Dureza (I)">
+                <option value="tabique_dureza">Tabique alta dureza - 40€ a 55€/m²</option>
+                <option value="trasdosado_dureza">Trasdosado alta dureza - 45€ a 60€/m²</option>
+            </optgroup>
+
+            <optgroup label="Muebles de Pladur">
+                <option value="mueble_estanteria">Estantería o mueble empotrado - 50€ a 100€/m²</option>
+                <option value="cabecero_pladur">Cabecero o diseño interior - 60€ a 90€/m²</option>
+            </optgroup>
+
+            <optgroup label="Otros">
+                <option value="reparacion_pladur">Reparación pequeña - 50€ a 150€ (por zona)</option>
+            </optgroup>
+        </select>
+        </figure>
+
+        <!-- Menú desplegable de opciones -->
+       
+         <!-- Descripción de tipos de pladur -->
+        <div class="descripcion-pladur" style="margin-top: 15px;">
+            <h4>Tipos de Pladur más comunes:</h4>
+            <ul>
+                <li><strong>Pladur Estándar (BA):</strong> Ideal para tabiques y techos interiores en zonas secas.</li>
+                <li><strong>Pladur Hidrófugo (H1):</strong> Recomendado para zonas húmedas como baños, cocinas y lavanderías.</li>
+                <li><strong>Pladur Ignífugo (F):</strong> Mayor resistencia al fuego, útil en cocinas industriales, salidas de emergencia o almacenes.</li>
+                <li><strong>Pladur Acústico:</strong> Aísla el sonido, ideal para oficinas privadas, salas de reuniones o consultorios.</li>
+                <li><strong>Pladur de Alta Dureza (I):</strong> Más resistente a golpes y desgaste, recomendado en zonas de alto tránsito.</li>
+                <li><strong>Muebles de Pladur:</strong> Soluciones decorativas como estanterías, cabeceros o separadores.</li>
+            </ul>
+        
+
+      
+        </div>
+
+
+    </div>
+     <div class="submit-container">
+                <button type="submit" id="enviarBtn">Enviar</button>
+            </div>
+</form>
+
+
+    </main>
+
+    
+</body>
+</html>

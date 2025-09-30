@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios Profesionales de Pintura</title>
+    <link rel="stylesheet" href="etiloservpintar.css">
+  
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <img src="multis.jpg" alt="Servicios profesionales de pintura y remodelación">
+        </div>
+        <nav>
+            <a href="principi.html" class="nav-btn">Inicio</a>
+            <h1>Bienvenido al área de pintar y embellecer</h1>
+        </nav>
+    </header>
+    
+    <main>
+        <form id="solicitudForm">
+            <div class="contact-fields">
+                <h2>Datos del Cliente</h2>
+                
+                <label for="nombre">Nombre Completo:</label>
+                <input type="text" id="nombre" name="nombre" required placeholder="Tu Nombre">
+
+                <label for="contactoEmail">Email (Contacto Principal):</label>
+                <input type="email" id="contactoEmail" name="contactoEmail" required placeholder="tu.correo@ejemplo.com">
+
+                <label for="contactoTelefono">Teléfono (Opcional):</label>
+                <input type="tel" id="contactoTelefono" name="contactoTelefono" placeholder="Ej: +34 600 123 456">
+
+                <label for="descripcionAdicional">Detalles Adicionales del Trabajo:</label>
+                <textarea id="descripcionAdicional" name="descripcionAdicional" rows="4" placeholder="Ej: 2 habitaciones, paredes y techo. Necesito colores claros."></textarea>
+            </div>
+           <div id="contenedorpintar" class="service-grid">
+                <!-- Casa/Departamento -->
+                <figure>
+                    <img src="imagenpintar/departameto.jpg" alt="Pintura residencial" width="387" height="239">
+                    <figcaption>Departamento/Casa</figcaption>
+                    <select class="area-select" name="area_casa" id="area_casa">
+                        <option value="" disabled selected>-- Seleccione área --</option>
+                        <optgroup label="Área de Casa">
+                            <option value="sala">Sala de estar</option>
+                            <option value="comedor">Comedor</option>
+                            <option value="cocina">Cocina</option>
+                            <option value="dormitorios">Dormitorios</option>
+                            <option value="baños">Baños</option>
+                            <option value="recibidor">Recibidor o entrada</option>
+                            <option value="pasillos">Pasillos</option>
+                            <option value="lavadero">Lavadero o área de lavado</option>
+                            <option value="despensa">Despensa</option>
+                            <option value="oficina">Oficina o estudio</option>
+                            <option value="juegos">Cuarto de juegos</option>
+                            <option value="jardin">Jardín</option>
+                            <option value="terraza">Terraza o balcón</option>
+                            <option value="garaje">Garaje</option>
+                            <option value="trastero">Trastero o bodega</option>
+                            <option value="vestidor">Vestidor</option>
+                            <option value="atico">Ático</option>
+                        </optgroup>
+                        <optgroup label="Área de Departamento">
+                            <option value="depto_comedor">Comedor</option>
+                            <option value="depto_cocina">Cocina</option>
+                            <option value="depto_dormitorios">Dormitorios</option>
+                            <option value="depto_baños">Baños</option>
+                            <option value="depto_recibidor">Recibidor o entrada</option>
+                            <option value="depto_pasillo">Pasillo</option>
+                            <option value="depto_lavadero">Lavadero o área de lavado</option>
+                            <option value="depto_balcon">Balcón o terraza</option>
+                            <option value="depto_vestidor">Vestidor</option>
+                            <option value="depto_oficina">Oficina o rincón de trabajo</option>
+                            <option value="depto_trastero">Trastero</option>
+                            <option value="depto_estacionamiento">Estacionamiento</option>
+                        </optgroup>
+                    </select>
+                </figure>
+                
+                <!-- Negocio -->
+                <figure>
+                    <img src="imagenpintar/negocio.jpg" alt="Pintura comercial" width="387" height="239">
+                    <figcaption>Negocio</figcaption>
+                    <select class="area-select" name="area_negocio" id="area_negocio">
+                        <option value="" disabled selected>-- Seleccione área --</option>
+                        <optgroup label="Zonas de Restaurantes">
+                            <option value="rest_comedor">Zona de comedor</option>
+                            <option value="rest_barra">Barra o bar</option>
+                            <option value="rest_recepcion">Recepción o área de espera</option>
+                            <option value="rest_terraza">Terraza o patio</option>
+                            <option value="rest_baños">Baños para clientes</option>
+                            <option value="rest_cocina_caliente">Cocina caliente</option>
+                            <option value="rest_cocina_fria">Cocina fría</option>
+                            <option value="rest_emplatado">Área de emplatado</option>
+                            <option value="rest_lavado">Área de lavado</option>
+                            <option value="rest_almacen">Almacén de alimentos secos</option>
+                            <option value="rest_camaras">Cámaras frigoríficas y congeladores</option>
+                            <option value="rest_oficina">Oficina administrativa</option>
+                            <option value="rest_vestuarios">Vestuarios y baños del personal</option>
+                            <option value="rest_descanso">Área de descanso del personal</option>
+                            <option value="rest_recepcion_mercancia">Zona de recepción de mercancías</option>
+                            <option value="rest_almacen_limpieza">Almacén de limpieza y suministros</option>
+                            <option value="rest_residuos">Salida de residuos</option>
+                        </optgroup>
+                        <optgroup label="Área de Panadería">
+                            <option value="pan_cliente">Zona de atención al cliente</option>
+                            <option value="pan_exhibicion">Área de exhibición de productos</option>
+                            <option value="pan_caja">Caja o punto de venta</option>
+                            <option value="pan_comedor">Zona de comedor</option>
+                            <option value="pan_amasado">Área de amasado</option>
+                            <option value="pan_fermentacion">Área de fermentación</option>
+                            <option value="pan_horneado">Área de horneado</option>
+                            <option value="pan_enfriamiento">Área de enfriamiento</option>
+                            <option value="pan_decoracion">Zona de decoración y empaque</option>
+                            <option value="pan_almacen">Almacén de materias primas</option>
+                            <option value="pan_camaras">Cámaras frigoríficas y congeladores</option>
+                            <option value="pan_lavado">Área de lavado</option>
+                            <option value="pan_oficina">Oficina administrativa</option>
+                            <option value="pan_vestuarios">Vestuarios y baños del personal</option>
+                            <option value="pan_recepcion">Zona de recepción de mercancías</option>
+                            <option value="pan_residuos">Salida de residuos</option>
+                        </optgroup>
+                        <optgroup label="Área de Bares">
+                            <option value="bar_espera">Área de espera o recepción</option>
+                            <option value="bar_pista">Pista de baile</option>
+                            <option value="bar_dj">Cabina de DJ o escenario</option>
+                            <option value="bar_cocina">Cocina o área de preparación</option>
+                            <option value="bar_almacen">Almacén de bebidas</option>
+                            <option value="bar_camaras">Cámaras frigoríficas</option>
+                            <option value="bar_baños">Baños para clientes</option>
+                            <option value="bar_lavado">Área de lavado</option>
+                            <option value="bar_oficina">Oficina administrativa</option>
+                            <option value="bar_vestuarios">Vestuarios y baños del personal</option>
+                            <option value="bar_carga">Zona de carga y descarga</option>
+                            <option value="bar_residuos">Salida de residuos</option>
+                        </optgroup>
+                    </select>
+                </figure>
+                
+                <!-- Oficina -->
+                <figure>
+                    <img src="imagenpintar/oficina.jpg" alt="Pintura para oficinas" width="387" height="239">
+                    <figcaption>Oficina</figcaption>
+                    <select class="area-select" name="area_oficina" id="area_oficina">
+                        <option value="" disabled selected>-- Seleccione área --</option>
+                        <optgroup label="Consultorio Médico">
+                            <option value="med_recepcion">Recepción</option>
+                            <option value="med_espera">Sala de espera</option>
+                            <option value="med_consultorio">Consultorio médico</option>
+                            <option value="med_exploracion">Sala de exploración</option>
+                            <option value="med_procedimientos">Sala de procedimientos menores</option>
+                            <option value="med_archivo">Área de archivo o historial clínico</option>
+                            <option value="med_oficina">Oficina administrativa</option>
+                            <option value="med_baños_pacientes">Baños para pacientes</option>
+                            <option value="med_baños_personal">Baños para personal</option>
+                            <option value="med_limpieza">Área de limpieza y desinfección</option>
+                            <option value="med_almacen">Almacén de insumos médicos</option>
+                            <option value="med_descanso">Sala de descanso del personal</option>
+                            <option value="med_residuos">Zona de residuos biológicos</option>
+                        </optgroup>
+                        <optgroup label="Bufete de Abogados">
+                            <option value="buf_espera">Sala de espera</option>
+                            <option value="buf_despachos">Despachos individuales</option>
+                            <option value="buf_reuniones">Sala de reuniones o juntas</option>
+                            <option value="buf_conferencias">Sala de conferencias</option>
+                            <option value="buf_oficina">Oficina administrativa</option>
+                            <option value="buf_biblioteca">Archivo legal o biblioteca jurídica</option>
+                            <option value="buf_copiado">Área de copiado e impresión</option>
+                            <option value="buf_baños_clientes">Baños para clientes</option>
+                            <option value="buf_baños_personal">Baños para personal</option>
+                            <option value="buf_cocina">Cocina o área de descanso</option>
+                            <option value="buf_trastero">Trastero o almacén</option>
+                        </optgroup>
+                        <optgroup label="Áreas de Empresas">
+                            <option value="emp_recepcion">Recepción</option>
+                            <option value="emp_espera">Sala de espera</option>
+                            <option value="emp_oficinas">Oficinas individuales</option>
+                            <option value="emp_trabajo">Área de trabajo compartido</option>
+                            <option value="emp_reuniones">Sala de reuniones</option>
+                            <option value="emp_conferencias">Sala de conferencias o capacitación</option>
+                            <option value="emp_direccion">Oficina de dirección o gerencia</option>
+                            <option value="emp_rrhh">Departamento de recursos humanos</option>
+                            <option value="emp_contable">Departamento contable y financiero</option>
+                            <option value="emp_comercial">Departamento comercial o ventas</option>
+                            <option value="emp_marketing">Departamento de marketing</option>
+                            <option value="emp_sistemas">Departamento de informática o sistemas</option>
+                            <option value="emp_archivo">Archivo o almacén documental</option>
+                            <option value="emp_copiado">Área de copiado e impresión</option>
+                            <option value="emp_cocina">Cocina o comedor para empleados</option>
+                            <option value="emp_baños">Baños para personal y visitantes</option>
+                            <option value="emp_descanso">Sala de descanso</option>
+                            <option value="emp_trastero">Trastero o almacén general</option>
+                            <option value="emp_estacionamiento">Estacionamiento</option>
+                            <option value="emp_carga">Zona de carga y descarga</option>
+                        </optgroup>
+                    </select>
+                </figure>
+            </div>
+            
+            <div class="submit-container">
+                <button type="submit" id="enviarBtn">Solicitar Presupuesto</button>
+            </div>
+        </form>
+    </main>
+
+    <script src="envioPresupuesto.js"></script>
+</body>
+</html>

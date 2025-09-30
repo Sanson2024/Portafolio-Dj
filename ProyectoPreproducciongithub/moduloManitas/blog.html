@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Manitas</title>
+    <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+    <header>
+       
+        <h1>Blog de Multiservicio Manitas</h1>
+        <h2 style="color: orangered;">Estamos en construcion de esta pagina gracia !</h2>
+        <nav>
+            <ul>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#bitacora">Bitácora</a></li>
+                <li><a href="#comentarios">Comentarios</a></li>
+                <li><a href="principi.html">Principal</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Sección de Servicios -->
+        <section id="servicios">
+            <h2>Servicios que Ofrecemos</h2>
+            <ul class="servicios-lista">
+                <li>Pintura interior y exterior</li>
+                <li>Instalación de persianas</li>
+                <li>Pladur y acabados</li>
+                <li>Electricidad</li>
+                <li>Limpieza</li>
+                <li>Fontanería</li>
+                <li>Jardinería</li>
+                <li>Organización de espacios</li>
+                <!-- ...otros servicios... -->
+            </ul>
+        </section>
+        <!-- Sección de Bitácora -->
+        <section id="bitacora">
+            <h2>Bitácora de Trabajos Realizados</h2>
+            <div class="bitacora-grid">
+                <!-- Ejemplo de entrada de bitácora -->
+                <article class="bitacora-item">
+                    <img src="ejemplo-foto.jpg" alt="Trabajo realizado">
+                    <video controls src="ejemplo-video.mp4"></video>
+                    <h3>Pintura de fachada</h3>
+                    <p>Renovación completa de la fachada de una vivienda en Madrid.</p>
+                </article>
+                <!-- ...más artículos... -->
+            </div>
+        </section>
+        <!-- Sección de Comentarios -->
+        <section id="comentarios">
+            <h2>Comentarios de Usuarios</h2>
+            <form id="formComentario">
+                <input type="text" id="nombre" placeholder="Tu nombre" required>
+                <textarea id="mensaje" placeholder="Escribe tu comentario" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+            <div id="listaComentarios">
+                <!-- Los comentarios aparecerán aquí -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Multiservicio Manitas</p>
+    </footer>
+    <script src="blog.js"></script>
+</body>
+</html>

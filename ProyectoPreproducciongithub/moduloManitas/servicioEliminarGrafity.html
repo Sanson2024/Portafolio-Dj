@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicio de Eliminación de Grafitis</title>
+    <link rel="stylesheet" href="etiloservpintar.css">
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <img src="multis.jpg" alt="Servicios profesionales de eliminación de grafitis">
+        </div>
+        <nav>
+            <a href="principi.html" class="nav-btn">Inicio</a>
+            <h1>Bienvenido al área de Eliminación de Grafitis</h1>
+        </nav>
+    </header>
+    
+    <main>
+      <form id="solicitudForm" action="procesar.php" method="POST">
+
+        <!-- Paredes -->
+        <div id="contenedorParedes" class="service-grid">
+            <div class="descripcion-paredes">
+                <h4>Eliminación en Paredes:</h4>
+                <ul>
+                    <li><strong>Superficies de ladrillo o concreto:</strong> Uso de productos especiales que eliminan la pintura sin dañar el material.</li>
+                    <li><strong>Paredes pintadas:</strong> Limpieza y retoque de la pintura afectada.</li>
+                </ul>
+            </div>
+            <figure>
+                <img src="elimianaGrafity.jpg" alt="Eliminación de grafitis en paredes" width="387" height="239">
+                <figcaption>Paredes</figcaption>
+
+                <select class="area-select" name="servicio_pared" id="servicio_pared" required>
+                    <option value="" disabled selected>-- Seleccione servicio --</option>
+                    <option value="ladrillo">Pared de ladrillo/concreto</option>
+                    <option value="pintada">Pared pintada</option>
+                </select>
+
+                <select class="area-select" name="costo_pared" id="costo_pared" required>
+                    <option value="" disabled selected>-- Seleccione costo --</option>
+                    <option value="pequeno">$50 - Área pequeña</option>
+                    <option value="mediano">$90 - Área mediana</option>
+                    <option value="grande">$150 - Área grande</option>
+                </select>
+            </figure>
+        </div>
+
+        <!-- Persianas metálicas -->
+        <div id="contenedorPersianas" class="service-grid">
+            <div class="descripcion-persianas">
+                <h4>Eliminación en Persianas Metálicas:</h4>
+                <ul>
+                    <li><strong>Persianas de negocio:</strong> Limpieza profunda para devolver el aspecto original.</li>
+                    <li><strong>Protección:</strong> Aplicación de recubrimientos anti-grafiti para prevenir futuros daños.</li>
+                </ul>
+            </div>
+            <figure>
+                <img src="grafitis.jpg" alt="Eliminación de grafitis en persianas metálicas" width="387" height="239">
+                <figcaption>Persianas Metálicas</figcaption>
+
+                <select class="area-select" name="servicio_persiana" id="servicio_persiana" required>
+                    <option value="" disabled selected>-- Seleccione servicio --</option>
+                    <option value="limpieza">Limpieza de grafiti</option>
+                    <option value="proteccion">Limpieza + protección anti-grafiti</option>
+                </select>
+
+                <select class="area-select" name="costo_persiana" id="costo_persiana" required>
+                    <option value="" disabled selected>-- Seleccione costo --</option>
+                    <option value="pequeno">$70 - Persianas pequeñas</option>
+                    <option value="mediano">$120 - Persianas medianas</option>
+                    <option value="grande">$200 - Persianas grandes</option>
+                </select>
+            </figure>
+        </div>
+
+        <!-- Otros espacios -->
+        <div id="contenedorOtros" class="service-grid">
+            <div class="descripcion-otros">
+                <h4>Otros Espacios:</h4>
+                <ul>
+                    <li><strong>Muros perimetrales:</strong> Eliminación en muros de seguridad y exteriores.</li>
+                    <li><strong>Mobiliario urbano:</strong> Limpieza de postes, bancos y otros elementos afectados.</li>
+                </ul>
+            </div>
+            <figure>
+                <img src="grafityCristal.jpg" alt="Eliminación de grafitis en otros espacios" width="387" height="239">
+                <figcaption>Otros Espacios</figcaption>
+
+                <select class="area-select" name="servicio_otros" id="servicio_otros" required>
+                    <option value="" disabled selected>-- Seleccione servicio --</option>
+                    <option value="muros">Muros perimetrales</option>
+                    <option value="mobiliario">Mobiliario urbano</option>
+                </select>
+
+                <select class="area-select" name="costo_otros" id="costo_otros" required>
+                    <option value="" disabled selected>-- Seleccione costo --</option>
+                    <option value="pequeno">$40 - Elementos pequeños</option>
+                    <option value="mediano">$80 - Elementos medianos</option>
+                    <option value="grande">$130 - Elementos grandes</option>
+                </select>
+            </figure>
+        </div>
+
+        <!-- Botón de envío -->
+        <div class="submit-container">
+            <button type="submit" id="enviarBtn">Solicitar Servicio</button>
+        </div>
+
+      </form>
+    </main>
+</body>
+</html>

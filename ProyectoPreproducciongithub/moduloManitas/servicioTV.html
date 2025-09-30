@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instalación de Televisores de Pared</title>
+    <link rel="stylesheet" href="etiloservpintar.css">
+</head>
+<body>
+    <header>
+         <div class="banner">
+            <img src="multis.jpg" alt="Servicios profesionales de pintura y remodelación">
+        </div>
+        <nav>
+            <a href="principi.html" class="nav-btn">Inicio</a>
+            <h1>Instalación Profesional de Televisores de Pared</h1>
+        </nav>
+            <h1></h1>
+        </nav>
+    </header>
+    
+    <main>
+        <form id="solicitudForm" action="procesar.php" method="POST">
+            <div id="contenedorTV" class="service-grid">
+                
+                <!-- Televisor Pequeño -->
+                <figure>
+                    <img src="tvhombre.jpg" alt="Televisor pequeño" width="387" height="239">
+                    <figcaption>Televisor Pequeño</figcaption>
+                    <p class="tv">Ideal para cocinas, dormitorios o espacios reducidos. Tamaños entre <b>24” y 32”</b>. Fácil instalación en pared.</p>
+                    <select class="area-select" name="tv_pequeno" id="tv_pequeno">
+                        <option value="" disabled selected>-- Seleccione dificultad instalación --</option>
+                        <option value="facil">$40 - Instalación básica</option>
+                        <option value="media">$60 - Instalación con ajuste de cables</option>
+                        <option value="dificil">$80 - Instalación con soporte móvil y ocultamiento de cables</option>
+                    </select>
+                </figure>
+
+                <!-- Televisor Mediano -->
+                <figure>
+                    <img src="tv.jpg" alt="Televisor mediano" width="387" height="239">
+                    <figcaption>Televisor Mediano</figcaption>
+                    <p class="tv">Perfecto para salas de estar. Tamaños entre <b>40” y 55”</b>. Requiere soporte adecuado para mayor peso.</p>
+                    <select class="area-select" name="tv_mediano" id="tv_mediano">
+                        <option value="" disabled selected>-- Seleccione dificultad instalación --</option>
+                        <option value="facil">$60 - Instalación básica</option>
+                        <option value="media">$90 - Instalación con ajuste de cables</option>
+                        <option value="dificil">$120 - Instalación con soporte móvil y ocultamiento de cables</option>
+                    </select>
+                </figure>
+
+                <!-- Televisor Grande -->
+                <figure>
+                    <img src="tvPareja.jpg" alt="Televisor grande" width="387" height="239">
+                    <figcaption>Televisor Grande</figcaption>
+                    <p class="tv">Recomendado para salas principales o áreas comunes. Tamaños entre <b>60” y 75”</b>. Necesita soporte robusto.</p>
+                    <select class="area-select" name="tv_grande" id="tv_grande">
+                        <option value="" disabled selected>-- Seleccione dificultad instalación --</option>
+                        <option value="facil">$90 - Instalación básica</option>
+                        <option value="media">$130 - Instalación con ajuste de cables</option>
+                        <option value="dificil">$170 - Instalación con soporte móvil y ocultamiento de cables</option>
+                    </select>
+                </figure>
+                <!-- Televisor Extra Grande -->
+                <figure>
+                    <img src="soportetv.jpg" alt="Televisor extra grande" width="387" height="239">
+                    <figcaption>Televisor Extra Grande</figcaption>
+                    <p class="tv">Perfecto para home theater o salones amplios. Tamaños de <b>80” a más de 100”</b>. Instalación avanzada y especializada.</p>
+                    <select class="area-select" name="tv_extragrande" id="tv_extragrande">
+                        <option value="" disabled selected>-- Seleccione dificultad instalación --</option>
+                        <option value="facil">$150 - Instalación básica</option>
+                        <option value="media">$200 - Instalación con ajuste de cables</option>
+                        <option value="dificil">$300 - Instalación con soporte móvil, ocultamiento de cables y refuerzo de pared</option>
+                    </select>
+                </figure>
+            </div>
+            
+             <div class="submit-container">
+                <button type="submit" id="enviarBtn">Enviar</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
+

@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    height: auto;
+    background-color: #C9C5B1;
+}
+
+.titulo {
+    color: beige;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+img.img1 {
+    width:100%;
+    height:500px;
+}
+
+.imgservicios {
+    width: 400px;
+    height: 300px;
+    color: dimgrey;
+    background-color: beige;
+    border-radius: 0px 30px 6px 10px;
+    padding: 10px;
+}
+.inlista{
+display: flex;
+background-color: #787569;
+list-style: none;
+}
+
+.FatherDiv {
+    background-color: #787569;
+}
+
+.imgDiv {
+    width: 150px;
+    height: 150px;
+}
+
+.pie {
+    width: 100%;
+    height: 200px;
+}
+
+footer {
+    background-color: #C9C5B1;
+    padding: 20px;
+    text-align: center;
+}

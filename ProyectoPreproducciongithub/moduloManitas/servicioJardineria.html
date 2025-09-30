@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios de Mantenimiento de Jardines</title>
+    <link rel="stylesheet" href="etiloservpintar.css">
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <img src="multis.jpg" alt="Servicios profesionales de jardinería">
+        </div>
+        <nav>
+            <a href="principi.html" class="nav-btn">Inicio</a>
+            <h1>Bienvenido al área de Mantenimiento de Jardines</h1>
+        </nav>
+    </header>
+    
+    <main>
+      <form id="solicitudForm" action="procesar.php" method="POST">
+        
+        <!-- Jardinería Básica -->
+        <div id="contenedorBasico" class="service-grid">
+            <div class="descripcion-basico">
+                <h4>Servicios de Jardinería Básica:</h4>
+                <ul>
+                    <li><strong>Corte de Césped:</strong> Mantén tu césped siempre parejo y saludable.</li>
+                    <li><strong>Riego y Abonado:</strong> Ideal para conservar plantas verdes y fuertes.</li>
+                    <li><strong>Poda Ligera:</strong> Para arbustos pequeños y setos decorativos.</li>
+                </ul>
+            </div>
+            <figure>
+                <img src="jardineriaBasica.jpg" alt="Jardinería básica" width="387" height="239">
+                <figcaption>Mantenimiento básico</figcaption>
+                
+                <select class="area-select" name="tipo_basico" id="tipo_basico" required>
+                    <option value="" disabled selected>-- Seleccione tipo de servicio --</option>
+                    <option value="cesped">Corte de Césped</option>
+                    <option value="riego">Riego y Abonado</option>
+                    <option value="poda">Poda Ligera</option>
+                </select>
+                
+                <select class="area-select" name="costo_basico" id="costo_basico" required>
+                    <option value="" disabled selected>-- Seleccione rango de costo --</option>
+                    <option value="facil">$30 - Corte de Césped</option>
+                    <option value="medio">$50 - Riego y Abonado</option>
+                    <option value="dificil">$70 - Poda Ligera</option>
+                </select>
+            </figure>
+        </div>
+        
+        <!-- Jardinería Intermedia -->
+        <div id="contenedorIntermedio" class="service-grid">
+            <div class="descripcion-intermedio">
+                <h4>Servicios de Jardinería Intermedia:</h4>
+                <ul>
+                    <li><strong>Poda de Árboles Pequeños:</strong> Mantén en forma tus árboles ornamentales.</li>
+                    <li><strong>Control de Maleza:</strong> Eliminación de hierbas no deseadas.</li>
+                    <li><strong>Replantación:</strong> Renovación de plantas y flores en tu jardín.</li>
+                </ul>
+            </div>
+            <figure>
+                <img src="Plantar.jpg" alt="Jardinería intermedia" width="387" height="239">
+                <figcaption>Mantenimiento intermedio</figcaption>
+                
+                <select class="area-select" name="tipo_intermedio" id="tipo_intermedio" required>
+                    <option value="" disabled selected>-- Seleccione tipo de servicio --</option>
+                    <option value="poda_arboles">Poda de Árboles Pequeños</option>
+                    <option value="maleza">Control de Maleza</option>
+                    <option value="replantacion">Replantación</option>
+                </select>
+                
+                <select class="area-select" name="costo_intermedio" id="costo_intermedio" required>
+                    <option value="" disabled selected>-- Seleccione rango de costo --</option>
+                    <option value="facil">$80 - Poda de Árboles</option>
+                    <option value="medio">$100 - Control de Maleza</option>
+                    <option value="dificil">$120 - Replantación</option>
+                </select>
+            </figure>
+        </div>
+        
+        <!-- Jardinería Avanzada -->
+        <div id="contenedorAvanzado" class="service-grid">
+            <div class="descripcion-avanzado">
+                <h4>Servicios de Jardinería Avanzada:</h4>
+                <ul>
+                    <li><strong>Poda de Árboles Grandes:</strong> Seguridad y mantenimiento para árboles altos.</li>
+                    <li><strong>Diseño de Jardín:</strong> Planificación estética y funcional.</li>
+                    <li><strong>Instalación de Sistemas de Riego:</strong> Automatiza el cuidado de tu jardín.</li>
+                </ul>
+            </div>
+            <figure>
+                <img src="Podar.jpeg" alt="Jardinería avanzada" width="387" height="239">
+                <figcaption>Mantenimiento avanzado</figcaption>
+                
+                <select class="area-select" name="tipo_avanzado" id="tipo_avanzado" required>
+                    <option value="" disabled selected>-- Seleccione tipo de servicio --</option>
+                    <option value="poda_grandes">Poda de Árboles Grandes</option>
+                    <option value="diseno">Diseño de Jardín</option>
+                    <option value="riego">Instalación de Riego</option>
+                </select>
+                
+                <select class="area-select" name="costo_avanzado" id="costo_avanzado" required>
+                    <option value="" disabled selected>-- Seleccione rango de costo --</option>
+                    <option value="facil">$150 - Poda Árboles Grandes</option>
+                    <option value="medio">$200 - Diseño de Jardín</option>
+                    <option value="dificil">$300 - Instalación de Riego</option>
+                </select>
+            </figure>
+        </div>
+        
+        <!-- Botón de envío -->
+        <div class="submit-container">
+            <button type="submit" id="enviarBtn">Solicitar Servicio</button>
+        </div>
+        
+      </form>
+    </main>
+</body>
+</html>

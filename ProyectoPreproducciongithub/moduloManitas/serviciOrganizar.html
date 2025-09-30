@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicio de Ordenar Espacios</title>
+    <link rel="stylesheet" href="etiloservpintar.css">
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <img src="multis.jpg" alt="Servicios profesionales de organización de espacios">
+        </div>
+        <nav>
+            <a href="principi.html" class="nav-btn">Inicio</a>
+            <h1>Bienvenido al área de Organización y Orden de Espacios</h1>
+        </nav>
+    </header>
+    
+    <main>
+      <form id="solicitudForm" action="procesar.php" method="POST">
+        
+        <!-- Organización de Garajes -->
+        <div id="contenedorGarajes" class="service-grid">
+            <div class="descripcion-garajes">
+                <h4>Organización de Garajes:</h4>
+                <ul>
+                    <li><strong>Clasificación de objetos:</strong> Separación de lo útil y lo desechable.</li>
+                    <li><strong>Embalaje:</strong> Cajas y etiquetas para facilitar el acceso.</li>
+                    <li><strong>Optimización del espacio:</strong> Acomodo estratégico de herramientas y accesorios.</li>
+                </ul>
+            </div>
+            <figure>
+                <img src="ordenEscalera.webp" alt="Organización de garajes" width="387" height="239">
+                <figcaption>Garajes</figcaption>
+                
+                <select class="area-select" name="accion_garaje" id="accion_garaje" required>
+                    <option value="" disabled selected>-- Seleccione acción --</option>
+                    <option value="tirar">Tirar objetos en desuso</option>
+                    <option value="embalar">Embalar y clasificar</option>
+                    <option value="acomodar">Acomodar y organizar</option>
+                </select>
+                
+                <select class="area-select" name="costo_garaje" id="costo_garaje" required>
+                    <option value="" disabled selected>-- Seleccione tamaño del espacio --</option>
+                    <option value="pequeno">$80 - Garaje pequeño</option>
+                    <option value="mediano">$120 - Garaje mediano</option>
+                    <option value="grande">$180 - Garaje grande</option>
+                </select>
+            </figure>
+        </div>
+        
+        <!-- Organización de Trasteros -->
+        <div id="contenedorTrasteros" class="service-grid">
+            <div class="descripcion-trasteros">
+                <h4>Organización de Trasteros:</h4>
+                <ul>
+                    <li><strong>Clasificación rápida:</strong> Separación de objetos útiles y basura.</li>
+                    <li><strong>Orden y almacenamiento:</strong> Uso de estanterías y cajas rotuladas.</li>
+                    <li><strong>Eliminación de acumulación:</strong> Retiro de objetos dañados o en desuso.</li>
+                </ul>
+            </div>
+            <figure>
+                <img src="trasteros.jpg" alt="Organización de trasteros" width="387" height="239">
+                <figcaption>Trasteros</figcaption>
+                
+                <select class="area-select" name="accion_trastero" id="accion_trastero" required>
+                    <option value="" disabled selected>-- Seleccione acción --</option>
+                    <option value="tirar">Tirar objetos</option>
+                    <option value="embalar">Embalar y ordenar</option>
+                    <option value="acomodar">Acomodar en estantes</option>
+                </select>
+                
+                <select class="area-select" name="costo_trastero" id="costo_trastero" required>
+                    <option value="" disabled selected>-- Seleccione tamaño del espacio --</option>
+                    <option value="pequeno">$60 - Trastero pequeño</option>
+                    <option value="mediano">$90 - Trastero mediano</option>
+                    <option value="grande">$140 - Trastero grande</option>
+                </select>
+            </figure>
+        </div>
+        
+        <!-- Organización de Cuartos de Acumulación -->
+        <div id="contenedorAcumulacion" class="service-grid">
+            <div class="descripcion-acumulacion">
+                <h4>Organización de Cuartos de Acumulación:</h4>
+                <ul>
+                    <li><strong>Limpieza profunda:</strong> Eliminación de objetos dañados o basura.</li>
+                    <li><strong>Separación y clasificación:</strong> Guardar lo útil y desechar lo innecesario.</li>
+                    <li><strong>Reordenamiento:</strong> Acomodo limpio y funcional del espacio.</li>
+                </ul>
+            </div>
+            <figure>
+                <img src="armariocuarto.jpg" alt="Organización de cuartos de acumulación" width="387" height="239">
+                <figcaption>Cuartos de Acumulación</figcaption>
+                
+                <select class="area-select" name="accion_acumulacion" id="accion_acumulacion" required>
+                    <option value="" disabled selected>-- Seleccione acción --</option>
+                    <option value="tirar">Tirar objetos acumulados</option>
+                    <option value="embalar">Embalar y clasificar</option>
+                    <option value="acomodar">Reordenar espacio</option>
+                </select>
+                
+                <select class="area-select" name="costo_acumulacion" id="costo_acumulacion" required>
+                    <option value="" disabled selected>-- Seleccione tamaño del espacio --</option>
+                    <option value="pequeno">$100 - Espacio pequeño</option>
+                    <option value="mediano">$150 - Espacio mediano</option>
+                    <option value="grande">$220 - Espacio grande</option>
+                </select>
+            </figure>
+        </div>
+        
+        <!-- Otros Espacios -->
+        <div id="contenedorOtros" class="service-grid">
+            <div class="descripcion-otros">
+                <h4>Otros espacios:</h4>
+                <ul>
+                    <li><strong>Bodegas:</strong> Organización y limpieza general.</li>
+                    <li><strong>Sótanos:</strong> Retiro de humedad y objetos viejos.</li>
+                    <li><strong>Áticos:</strong> Embalaje y acomodo de objetos poco usados.</li>
+                </ul>
+            </div>
+            <figure>
+                <img src="ordenarAtico.webp" alt="Organización de otros espacios" width="387" height="239">
+                <figcaption>Otros Espacios</figcaption>
+                
+                <select class="area-select" name="accion_otros" id="accion_otros" required>
+                    <option value="" disabled selected>-- Seleccione acción --</option>
+                    <option value="tirar">Tirar objetos</option>
+                    <option value="embalar">Embalar y clasificar</option>
+                    <option value="acomodar">Acomodar y organizar</option>
+                </select>
+                
+                <select class="area-select" name="costo_otros" id="costo_otros" required>
+                    <option value="" disabled selected>-- Seleccione tamaño del espacio --</option>
+                    <option value="pequeno">$70 - Espacio pequeño</option>
+                    <option value="mediano">$110 - Espacio mediano</option>
+                    <option value="grande">$160 - Espacio grande</option>
+                </select>
+            </figure>
+        </div>
+        
+        <!-- Botón de envío -->
+        <div class="submit-container">
+            <button type="submit" id="enviarBtn">Solicitar Servicio</button>
+        </div>
+        
+      </form>
+    </main>
+</body>
+</html>

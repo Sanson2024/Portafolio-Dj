@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicio de Fontanería Básica</title>
+    <link rel="stylesheet" href="etiloservpintar.css">
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <img src="multis.jpg" alt="Servicios profesionales de fontanería básica">
+        </div>
+        <nav>
+            <a href="principi.html" class="nav-btn">Inicio</a>
+            <h1>Bienvenido al área de Fontanería Básica</h1>
+        </nav>
+    </header>
+    
+    <main>
+      <form id="solicitudForm" action="procesar.php" method="POST">
+
+        <!-- Reparación de grifos -->
+        <div id="contenedorGrifos" class="service-grid">
+            <div class="descripcion-grifos">
+                <h4>Reparación de Grifos:</h4>
+                <ul>
+                    <li><strong>Goteo constante:</strong> Eliminamos fugas y reemplazamos empaques dañados.</li>
+                    <li><strong>Grifos atascados:</strong> Soluciones rápidas para grifos que no giran bien.</li>
+                    <li><strong>Instalación:</strong> Montaje de grifos nuevos en cocina o baño.</li>
+                </ul>
+            </div>
+            <figure>
+                <img src="goteo.jpg" alt="Reparación de grifos" width="387" height="239">
+                <figcaption>Grifos</figcaption>
+
+                <select class="area-select" name="servicio_grifo" id="servicio_grifo" required>
+                    <option value="" disabled selected>-- Seleccione servicio --</option>
+                    <option value="reparacion">Reparación de goteo</option>
+                    <option value="mantenimiento">Mantenimiento preventivo</option>
+                    <option value="instalacion">Instalación de grifo nuevo</option>
+                </select>
+
+                <select class="area-select" name="costo_grifo" id="costo_grifo" required>
+                    <option value="" disabled selected>-- Seleccione costo --</option>
+                    <option value="basico">$40 - Servicio básico</option>
+                    <option value="completo">$70 - Servicio completo</option>
+                </select>
+            </figure>
+        </div>
+
+        <!-- Desatascos menores -->
+        <div id="contenedorDesatascos" class="service-grid">
+            <div class="descripcion-desatascos">
+                <h4>Desatascos Menores:</h4>
+                <ul>
+                    <li><strong>Lavabos:</strong> Eliminación de obstrucciones por cabello o jabón.</li>
+                    <li><strong>Cocina:</strong> Despeje de tuberías con grasa o restos de comida.</li>
+                </ul>
+            </div>
+            <figure>
+                <img src="grifos.jpg" alt="Desatascos menores" width="387" height="239">
+                <figcaption>Desatascos</figcaption>
+
+                <select class="area-select" name="servicio_desatasco" id="servicio_desatasco" required>
+                    <option value="" disabled selected>-- Seleccione servicio --</option>
+                    <option value="lavabo">Desatasco de lavabo</option>
+                    <option value="cocina">Desatasco de fregadero</option>
+                </select>
+
+                <select class="area-select" name="costo_desatasco" id="costo_desatasco" required>
+                    <option value="" disabled selected>-- Seleccione costo --</option>
+                    <option value="basico">$50 - Servicio básico</option>
+                    <option value="completo">$90 - Servicio completo</option>
+                </select>
+            </figure>
+        </div>
+
+        <!-- Botón de envío -->
+        <div class="submit-container">
+            <button type="submit" id="enviarBtn">Solicitar Servicio</button>
+        </div>
+
+      </form>
+    </main>
+</body>
+</html>
+<!-- mas completo con fugas duchas
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicio de Fontanería Básica</title>
+    <link rel="stylesheet" href="etiloservpintar.css">
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <img src="multis.jpg" alt="Servicios profesionales de fontanería básica">
+        </div>
+        <nav>
+            <a href="principi.html" class="nav-btn">Inicio</a>
+            <h1>Bienvenido al área de Fontanería Básica</h1>
+        </nav>
+    </header>
+    
+    <main>
+      <form id="solicitudForm" action="procesar.php" method="POST">
+
+       
+        <div id="contenedorGrifos" class="service-grid">
+            <div class="descripcion-grifos">
+                <h4>Reparación de Grifos:</h4>
+                <ul>
+                    <li><strong>Goteo constante:</strong> Eliminamos fugas y reemplazamos empaques dañados.</li>
+                    <li><strong>Grifos atascados:</strong> Soluciones rápidas para grifos que no giran bien.</li>
+                    <li><strong>Instalación:</strong> Montaje de grifos nuevos en cocina o baño.</li>
+                </ul>
+            </div>
+            <figure>
+                <img src="fontaneria/grifo.jpg" alt="Reparación de grifos" width="387" height="239">
+                <figcaption>Grifos</figcaption>
+
+                <select class="area-select" name="servicio_grifo" id="servicio_grifo" required>
+                    <option value="" disabled selected>-- Seleccione servicio --</option>
+                    <option value="reparacion">Reparación de goteo</option>
+                    <option value="mantenimiento">Mantenimiento preventivo</option>
+                    <option value="instalacion">Instalación de grifo nuevo</option>
+                </select>
+
+                <select class="area-select" name="costo_grifo" id="costo_grifo" required>
+                    <option value="" disabled selected>-- Seleccione costo --</option>
+                    <option value="basico">$40 - Servicio básico</option>
+                    <option value="completo">$70 - Servicio completo</option>
+                </select>
+            </figure>
+        </div>
+
+      
+        <div id="contenedorDesatascos" class="service-grid">
+            <div class="descripcion-desatascos">
+                <h4>Desatascos Menores:</h4>
+                <ul>
+                    <li><strong>Lavabos:</strong> Eliminación de obstrucciones por cabello o jabón.</li>
+                    <li><strong>Cocina:</strong> Despeje de tuberías con grasa o restos de comida.</li>
+                    <li><strong>Duchas:</strong> Limpieza de caños obstruidos.</li>
+                </ul>
+            </div>
+            <figure>
+                <img src="fontaneria/desatasco.jpg" alt="Desatascos menores" width="387" height="239">
+                <figcaption>Desatascos</figcaption>
+
+                <select class="area-select" name="servicio_desatasco" id="servicio_desatasco" required>
+                    <option value="" disabled selected>-- Seleccione servicio --</option>
+                    <option value="lavabo">Desatasco de lavabo</option>
+                    <option value="cocina">Desatasco de fregadero</option>
+                    <option value="ducha">Desatasco de ducha</option>
+                </select>
+
+                <select class="area-select" name="costo_desatasco" id="costo_desatasco" required>
+                    <option value="" disabled selected>-- Seleccione costo --</option>
+                    <option value="basico">$50 - Servicio básico</option>
+                    <option value="completo">$90 - Servicio completo</option>
+                </select>
+            </figure>
+        </div>
+
+   
+        <div id="contenedorFugas" class="service-grid">
+            <div class="descripcion-fugas">
+                <h4>Reparación de Fugas:</h4>
+                <ul>
+                    <li><strong>Tuberías:</strong> Sellado de fugas visibles y revisión preventiva.</li>
+                    <li><strong>Inodoros:</strong> Eliminación de pérdidas de agua en tanque o base.</li>
+                    <li><strong>Conexiones:</strong> Sustitución de juntas y mangueras dañadas.</li>
+                </ul>
+            </div>
+            <figure>
+                <img src="fontaneria/fuga.jpg" alt="Reparación de fugas de agua" width="387" height="239">
+                <figcaption>Fugas de Agua</figcaption>
+
+                <select class="area-select" name="servicio_fugas" id="servicio_fugas" required>
+                    <option value="" disabled selected>-- Seleccione servicio --</option>
+                    <option value="tuberia">Reparación de tuberías</option>
+                    <option value="inodoro">Reparación de fugas en inodoro</option>
+                    <option value="conexion">Revisión de conexiones</option>
+                </select>
+
+                <select class="area-select" name="costo_fugas" id="costo_fugas" required>
+                    <option value="" disabled selected>-- Seleccione costo --</option>
+                    <option value="basico">$60 - Servicio básico</option>
+                    <option value="completo">$100 - Servicio completo</option>
+                </select>
+            </figure>
+        </div>
+
+    
+        <div class="submit-container">
+            <button type="submit" id="enviarBtn">Solicitar Servicio</button>
+        </div>
+
+      </form>
+    </main>
+</body>
+</html>
+
+-->

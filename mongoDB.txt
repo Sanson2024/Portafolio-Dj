@@ -1,0 +1,35 @@
+dubalcultca_db_user
+
+Q587yBsaeyZVIF6m
+
+Q587yBsaeyZVIF6m
+
+mongodb+srv://dubalcultca_db_user:Q587yBsaeyZVIF6m@cluster0.kzyym3b.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+
+1. Seleccione su controlador y
+versión
+Recomendamos instalar y utilizar la última versión del controlador.
+
+Conductor
+
+Versión
+
+2. Instale su
+controlador
+Ejecute lo siguiente en la línea de comando
+npm install mongodb
+
+Ver las instrucciones de instalación del controlador MongoDB Node.js.
+3. Agregue su cadena de conexión al código de su aplicación
+.
+Utilice esta cadena de conexión en su aplicación
+
+
+Ver ejemplo de código completo
+
+
+Mostrar contraseña
+
+mongodb+srv://dubalcultca_db_user:Q587yBsaeyZVIF6m@cluster0.kzyym3b.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+
+La contraseña de dubalcultca_db_user se incluye en la cadena de conexión durante la primera configuración. Esta contraseña no estará disponible después de salir de este flujo de conexión.

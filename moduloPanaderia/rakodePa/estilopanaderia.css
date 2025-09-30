@@ -1,0 +1,244 @@
+/* VARIABLES GLOBALES Y PALETA DE COLOR */
+:root {
+    --color-primary: #BB4430; /* Rojo suave, terracota oscuro */
+    --color-secondary: #FFC09F; /* Rosa claro/piel, para acentos */
+    --color-background: #FFF8F0; /* Blanco roto/crema, para el fondo */
+    --color-text-dark: #333333;
+    --color-text-light: #FFFFFF;
+    --padding-section: 40px;
+    --border-radius: 8px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--color-text-dark);
+    background-color: var(--color-background);
+}
+
+/* TIPOGRAFÍA */
+h1, h2, h3 {
+    font-weight: 700;
+    margin-bottom: 0.5em;
+    color: var(--color-primary);
+}
+
+/* BOTONES Y ENLACES (Modularizados) */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.2s;
+    font-weight: bold;
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+}
+
+.btn-secondary {
+    background-color: var(--color-secondary);
+    color: var(--color-text-dark);
+    border: 1px solid var(--color-primary);
+}
+
+.btn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+/* HEADER Y NAVEGACIÓN */
+.header {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    padding: 15px 20px;
+    text-align: center;
+}
+
+.header a {
+    color: var(--color-secondary);
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* HERO SECTION (VIDEO) */
+.hero {
+    position: relative;
+    height: 60vh; /* Altura de la vista */
+    overflow: hidden;
+}
+
+.hero video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Sombra oscura para mejor legibilidad */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.overlay h2 {
+    color: var(--color-text-light);
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+
+/* SECCIONES PRINCIPALES */
+.section-padding {
+    padding: var(--padding-section) 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* PRODUCTOS (GRID) */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-title {
+    margin: 10px 0;
+}
+
+.product-price {
+    font-size: 1.2rem;
+    color: var(--color-primary);
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.btn-add {
+    width: 80%;
+}
+
+/* SECCIÓN PEDIDO Y FORMULARIO */
+.cart-container, .checkout-form {
+    background-color: white;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
+
+#cartItems {
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.checkout-form fieldset {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: var(--border-radius);
+}
+
+.checkout-form legend {
+    font-weight: bold;
+    color: var(--color-primary);
+    padding: 0 10px;
+}
+
+.checkout-form input[type="text"],
+.checkout-form input[type="tel"],
+.checkout-form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.payment-options label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.payment-info {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: var(--color-secondary);
+    border-radius: 4px;
+}
+
+/* DIALOG Y ASIDE */
+dialog {
+    border: 2px solid var(--color-primary);
+    border-radius: var(--border-radius);
+    padding: 30px;
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+aside {
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* FOOTER */
+.footer {
+    background-color: var(--color-text-dark);
+    color: var(--color-secondary);
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+}
+
+/* MEDIA QUERIES (RESPONSIVE DESIGN) */
+@media (max-width: 768px) {
+    .overlay h2 {
+        font-size: 1.8rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+}

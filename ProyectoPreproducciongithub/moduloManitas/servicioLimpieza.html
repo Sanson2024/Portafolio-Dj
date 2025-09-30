@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios de Limpieza Profesional</title>
+    <link rel="stylesheet" href="etiloservpintar.css">
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <img src="multis.jpg" alt="Servicios profesionales de limpieza">
+        </div>
+        <nav>
+            <a href="principi.html" class="nav-btn">Inicio</a>
+            <h1>Bienvenido al área de Limpieza de Hogares, Oficinas y Negocios</h1>
+        </nav>
+    </header>
+    
+    <main>
+      <form id="solicitudForm" action="procesar.php" method="POST">
+        
+        <!-- Limpieza en Hogares -->
+        <div id="contenedorHogares" class="service-grid">
+            <div class="descripcion-hogar">
+                <h4>Tipos de limpieza en hogares:</h4>
+                <ul>
+                    <li><strong>Limpieza Básica:</strong> Barrido, trapeado, desempolvado y baños.</li>
+                    <li><strong>Limpieza Profunda:</strong> Incluye cocina, ventanas, muebles y detalles.</li>
+                    <li><strong>Limpieza Post-evento:</strong> Perfecta después de reuniones o celebraciones.</li>
+                </ul>
+            </div>
+            <figure>
+                <img src="limpiadora.jpg" alt="Limpieza en hogares" width="387" height="239">
+                <figcaption>Limpieza de Hogares</figcaption>
+                
+                <select class="area-select" name="tipo_limpieza_hogar" id="tipo_limpieza_hogar" required>
+                    <option value="" disabled selected>-- Seleccione tipo de limpieza --</option>
+                    <option value="basica">Básica</option>
+                    <option value="profunda">Profunda</option>
+                    <option value="post_evento">Post-evento</option>
+                </select>
+                
+                <select class="area-select" name="costo_hogar" id="costo_hogar" required>
+                    <option value="" disabled selected>-- Seleccione rango de costo --</option>
+                    <option value="facil">$40 - Básica</option>
+                    <option value="medio">$80 - Profunda</option>
+                    <option value="dificil">$120 - Post-evento</option>
+                </select>
+            </figure>
+        </div>
+        
+        <!-- Limpieza en Oficinas -->
+        <div id="contenedorOficinas" class="service-grid">
+            <div class="descripcion-oficina">
+                <h4>Tipos de limpieza en oficinas:</h4>
+                <ul>
+                    <li><strong>Limpieza Regular:</strong> Escritorios, pisos, baños y áreas comunes.</li>
+                    <li><strong>Limpieza con Desinfección:</strong> Ideal para mantener un ambiente saludable.</li>
+                    <li><strong>Limpieza Profunda:</strong> Incluye alfombras, vidrios y mobiliario.</li>
+                </ul>
+            </div>
+            <figure>
+                <img src="liempiezaoficina.jpg" alt="Limpieza en oficinas" width="387" height="239">
+                <figcaption>Limpieza de Oficinas</figcaption>
+                
+                <select class="area-select" name="tipo_limpieza_oficina" id="tipo_limpieza_oficina" required>
+                    <option value="" disabled selected>-- Seleccione tipo de limpieza --</option>
+                    <option value="regular">Regular</option>
+                    <option value="desinfeccion">Con desinfección</option>
+                    <option value="profunda">Profunda</option>
+                </select>
+                
+                <select class="area-select" name="costo_oficina" id="costo_oficina" required>
+                    <option value="" disabled selected>-- Seleccione rango de costo --</option>
+                    <option value="facil">$60 - Regular</option>
+                    <option value="medio">$100 - Con desinfección</option>
+                    <option value="dificil">$150 - Profunda</option>
+                </select>
+            </figure>
+        </div>
+        
+        <!-- Limpieza en Negocios -->
+        <div id="contenedorNegocios" class="service-grid">
+            <div class="descripcion-negocio">
+                <h4>Tipos de limpieza en negocios:</h4>
+                <ul>
+                    <li><strong>Limpieza Comercial Básica:</strong> Áreas de atención al cliente, mostradores y baños.</li>
+                    <li><strong>Limpieza de Cocinas o Áreas de Producción:</strong> Ideal para restaurantes y panaderías.</li>
+                    <li><strong>Limpieza Profunda Integral:</strong> Todo el negocio incluyendo vidrios y almacenes.</li>
+                </ul>
+            </div>
+            <figure>
+                <img src="limpiezanegocio.jpg" alt="Limpieza en negocios" width="387" height="239">
+                <figcaption>Limpieza de Negocios</figcaption>
+                
+                <select class="area-select" name="tipo_limpieza_negocio" id="tipo_limpieza_negocio" required>
+                    <option value="" disabled selected>-- Seleccione tipo de limpieza --</option>
+                    <option value="basica">Comercial básica</option>
+                    <option value="cocinas">Cocinas o producción</option>
+                    <option value="profunda">Integral profunda</option>
+                </select>
+                
+                <select class="area-select" name="costo_negocio" id="costo_negocio" required>
+                    <option value="" disabled selected>-- Seleccione rango de costo --</option>
+                    <option value="facil">$80 - Básica</option>
+                    <option value="medio">$130 - Cocinas/producción</option>
+                    <option value="dificil">$200 - Integral profunda</option>
+                </select>
+            </figure>
+        </div>
+        
+        <!-- Botón de envío -->
+        <div class="submit-container">
+            <button type="submit" id="enviarBtn">Solicitar Servicio</button>
+        </div>
+        
+      </form>
+    </main>
+</body>
+</html>

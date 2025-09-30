@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panadería RaKo de Pa - Tienda Online</title>
+    <link rel="stylesheet" href="estilopanaderia.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>Panadería RaKo de Pa</h1>
+        <p>Productos frescos todos los días, ¡haz tu pedido ahora!</p>
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#pedido">Hacer Pedido</a></li>
+                <li><a href="#seguimiento">Seguimiento</a></li>
+                <li><a href="#registro">Acceso</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <video autoplay muted loop playsinline> 
+            <source src="amasando.mp4" type="video/mp4">
+            Tu navegador no soporta video.
+        </video>
+        <div class="overlay">
+            <h2>Bienvenido a Panadería RaKo de Pa<br>Elige tus productos favoritos</h2>
+        </div>
+    </section>
+
+    <main>
+
+        <section id="productos" class="section-padding">
+            <h2>Productos Destacados</h2>
+            <p>Mira nuestros productos frescos y deliciosos.</p>
+
+            <div class="product-grid" id="productGrid">
+                <article class="card product-item" data-id="pan-integral" data-precio="3.50">
+                    <img src="pan.jpg" alt="Pan integral saludable" loading="lazy">
+                    <h3 class="product-title">Pan Integral</h3>
+                    <p class="product-desc">Saludable, con harina 100% integral.</p>
+                    <p class="product-price">$3.50</p>
+                    <button class="btn btn-add" data-name="Pan Integral" data-price="3.50">Añadir al Pedido</button>
+                    <details class="product-details">
+                        <summary>Ver ingredientes</summary>
+                        <ul><li>Harina integral</li><li>Agua</li><li>Levadura</li><li>Sal</li></ul>
+                    </details>
+                </article>
+
+                <article class="card product-item" data-id="croissant-choc" data-precio="2.00">
+                    <img src="croasant.jpg" alt="Croissant de chocolate relleno" loading="lazy">
+                    <h3 class="product-title">Croissant de Chocolate</h3>
+                    <p class="product-desc">Delicioso, relleno de chocolate fundido.</p>
+                    <p class="product-price">$2.00</p>
+                    <button class="btn btn-add" data-name="Croissant de Chocolate" data-price="2.00">Añadir al Pedido</button>
+                </article>
+                
+                <article class="card product-item" data-id="pan-molde" data-precio="2.50">
+                    <img src="empanada.jpg" alt="Pan de molde para sandwiches" loading="lazy">
+                    <h3 class="product-title">Pan de Molde</h3>
+                    <p class="product-desc">Perfecto para sándwiches.</p>
+                    <p class="product-price">$2.50</p>
+                    <button class="btn btn-add" data-name="Pan de Molde" data-price="2.50">Añadir al Pedido</button>
+                </article>
+            </div>
+        </section>
+
+        <section id="pedido" class="section-padding">
+            <h2>Carrito y Confirmación de Pedido</h2>
+            <div class="cart-container">
+                <h3>Tu Pedido Actual (<span id="cartCount">0</span>)</h3>
+                <ul id="cartItems">
+                    </ul>
+                <div class="cart-total">
+                    <strong>Total: <span id="cartTotal">$0.00</span></strong>
+                </div>
+            </div>
+
+            <form id="orderForm" class="checkout-form">
+                <h3>Datos de Entrega y Pago</h3>
+
+                <fieldset>
+                    <legend>Información de Contacto</legend>
+                    <input type="text" id="nombre" placeholder="Nombre completo" required>
+                    <input type="tel" id="telefono" placeholder="Teléfono (+1 555...)" required>
+                    <input type="email" id="email" placeholder="Correo electrónico" required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Dirección de Entrega</legend>
+                    <input type="text" id="direccion" placeholder="Calle, número, piso" required>
+                    <input type="text" id="ciudad" placeholder="Ciudad, Código Postal" required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Método de Pago</legend>
+                    <div class="payment-options">
+                        <label><input type="radio" name="pago" value="bizum" required> Bizum</label>
+                        <label><input type="radio" name="pago" value="transferencia"> Transferencia Bancaria</label>
+                        <label><input type="radio" name="pago" value="efectivo"> Efectivo al Recibir</label>
+                    </div>
+                    <p id="paymentDetails" class="payment-info"></p>
+                </fieldset>
+
+                <button type="submit" class="btn btn-primary" id="confirmOrderBtn">Confirmar Pedido</button>
+                <p id="orderMessage" class="message-info"></p>
+            </form>
+        </section>
+
+        <section id="seguimiento" class="section-padding">
+            <h2>Seguimiento de Pedido</h2>
+            <p>Ingresa tu ID de pedido para ver el estado.</p>
+            <input type="text" id="trackingId" placeholder="Ej: RKP-12345">
+            <button class="btn btn-secondary" onclick="checkOrderStatus()">Ver Estado</button>
+            <div id="statusResult" class="tracking-result"></div>
+            
+            <div class="roles-info">
+                <h3>Roles del Sistema</h3>
+                <p><strong>Cliente:</strong> Recibe el ID de seguimiento.</p>
+                <p><strong>Despachador:</strong> Marca el pedido como "Preparando" o "Listo para Recoger/Enviar".</p>
+                <p><strong>Repartidor:</strong> Marca el pedido como "En camino" o "Entregado".</p>
+            </div>
+        </section>
+
+        <section id="registro" class="section-padding">
+            <h2>Registro / Acceso</h2>
+            <p>Regístrate o inicia sesión para agilizar tus futuros pedidos.</p>
+            <form id="registerForm" class="auth-form">
+                <input type="text" id="regUser" placeholder="Nombre de Usuario" required>
+                <input type="password" id="regPass" placeholder="Contraseña" required>
+                <select id="regRole" required>
+                    <option value="cliente">Cliente</option>
+                    <option value="despachador">Despachador (Acceso Restringido)</option>
+                    <option value="repartidor">Repartidor (Acceso Restringido)</option>
+                </select>
+                <button type="submit" class="btn btn-secondary">Registrarse</button>
+            </form>
+        </section>
+
+        <aside>
+            <button id="openDialog" class="btn btn-secondary">Ver Promoción del Día</button>
+            <dialog id="promoDialog">
+                <h3>¡Oferta Especial RaKo de Pa!</h3>
+                <p>Compra dos panes y recibe un croissant GRATIS.</p>
+                <button id="closeDialog" class="btn">Cerrar</button>
+            </dialog>
+        </aside>
+
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 Panadería RaKo de Pa. Todos los derechos reservados.</p>
+        <p>Diseñado con HTML5, CSS3, y JavaScript moderno.</p>
+    </footer>
+
+    <script src="panaderia.js"></script>
+
+</body>
+</html>

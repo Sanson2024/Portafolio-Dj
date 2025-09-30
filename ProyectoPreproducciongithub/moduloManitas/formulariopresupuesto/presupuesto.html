@@ -1,0 +1,51 @@
+<title>Solicitud</title>
+<link rel="stylesheet" href="estilopresupuesto.css" />
+
+</head>
+
+<body>
+<div class="contieneform">
+  <h1>Solicitud de Información</h1>
+
+  <form id="formulario" method="post">
+    <label for="Nombre">Nombre</label><br />
+    <input type="text" name="Nombre" id="Nombre" />
+    <div class="error" id="error-nombre">Por favor, escribe tu nombre.</div><br />
+
+    <label for="Correo">Correo</label><br />
+    <input type="email" name="Correo" id="Correo" />
+    <div class="error" id="error-correo">Introduce un correo válido.</div><br />
+
+    <label for="Movil">Móvil</label><br />
+    <input type="tel" name="Movil" id="Movil" />
+    <div class="error" id="error-movil">Escribe tu número de móvil.</div><br />
+
+    <label for="servicio">Servicio</label><br /> 
+    <select name="servicio" id="servicio">
+      <option value="">Escoger Servicio</option>
+      <option value="Pintar">Pintar</option>
+      <option value="Pladur">Pladur</option>
+      <option value="Electricidad">Electricidad</option>
+      <option value="Persiana">Instalación Persiana</option>
+      <option value="TV">Instalación TV</option>
+      <option value="Limpieza">Limpieza general</option>
+      <option value="Fontanería">Evaluacion Fontaneria</option>
+      <option value="Cristales ">Cristaleria</option>
+      <option value="Grafity">Eliminar Grafity</option>
+      <option value="jardin">Jardineria</option>
+      <option value="organizar ">Organizar Espacios</option>
+    </select>
+    <div class="error" id="error-servicio">Selecciona un servicio.</div><br /><br />
+
+    <h3>Describe brevemente tu petición</h3>
+    <textarea name="comentario" id="comentario" rows="5" cols="50" placeholder="Escribe aquí tu comentario"></textarea>
+    <div class="error" id="error-comentario">Escribe tu comentario.</div><br /><br />
+
+    <button class="button" type="submit">Enviar Información</button>
+  </form>
+</div>
+
+</body>
+<script src="formularioServicio.js"></script>
+
+</html>

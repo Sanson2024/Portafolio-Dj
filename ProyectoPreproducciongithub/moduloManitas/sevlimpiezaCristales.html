@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios de Limpieza de Cristales</title>
+    <link rel="stylesheet" href="etiloservpintar.css">
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <img src="multis.jpg" alt="Servicios profesionales de limpieza de cristales">
+        </div>
+        <nav>
+            <a href="principi.html" class="nav-btn">Inicio</a>
+            <h1>Bienvenido al área de Limpieza de Cristales</h1>
+        </nav>
+    </header>
+    
+    <main>
+      <form id="solicitudForm" action="procesar.php" method="POST">
+        
+        <!-- Cristales en Hogares -->
+        <div id="contenedorHogares" class="service-grid">
+            <div class="descripcion-hogar">
+                <h4>Limpieza de cristales en hogares:</h4>
+                <ul>
+                    <li><strong>Ventanas interiores:</strong> Limpieza rápida y sin marcas.</li>
+                    <li><strong>Ventanas exteriores:</strong> Eliminación de polvo, agua y manchas.</li>
+                    <li><strong>Puertas de vidrio:</strong> Brillo impecable en puertas corredizas o de entrada.</li>
+                </ul>
+            </div>
+            <figure>
+                <img src="limpiaCristales.jpg" alt="Limpieza de cristales en hogares" width="387" height="239">
+                <figcaption>Cristales en Hogares</figcaption>
+                
+                <select class="area-select" name="tipo_hogar" id="tipo_hogar" required>
+                    <option value="" disabled selected>-- Seleccione tipo de cristal --</option>
+                    <option value="ventanas_int">Ventanas interiores</option>
+                    <option value="ventanas_ext">Ventanas exteriores</option>
+                    <option value="puertas_vidrio">Puertas de vidrio</option>
+                </select>
+                
+                <select class="area-select" name="costo_hogar" id="costo_hogar" required>
+                    <option value="" disabled selected>-- Seleccione rango de costo --</option>
+                    <option value="facil">$25 - Ventanas interiores</option>
+                    <option value="medio">$40 - Ventanas exteriores</option>
+                    <option value="dificil">$50 - Puertas de vidrio</option>
+                </select>
+            </figure>
+        </div>
+        
+        <!-- Cristales en Oficinas -->
+        <div id="contenedorOficinas" class="service-grid">
+            <div class="descripcion-oficina">
+                <h4>Limpieza de cristales en oficinas:</h4>
+                <ul>
+                    <li><strong>Divisiones de vidrio:</strong> Separaciones internas transparentes y limpias.</li>
+                    <li><strong>Ventanas panorámicas:</strong> Eliminación de suciedad en grandes superficies.</li>
+                    <li><strong>Puertas y fachadas:</strong> Presentación impecable en áreas de acceso.</li>
+                </ul>
+            </div>
+            <figure>
+                <img src="panoramica.webp" alt="Limpieza de cristales en oficinas" width="387" height="239">
+                <figcaption>Cristales en Oficinas</figcaption>
+                
+                <select class="area-select" name="tipo_oficina" id="tipo_oficina" required>
+                    <option value="" disabled selected>-- Seleccione tipo de cristal --</option>
+                    <option value="divisiones">Divisiones de vidrio</option>
+                    <option value="ventanas_panoramicas">Ventanas panorámicas</option>
+                    <option value="puertas_fachadas">Puertas y fachadas</option>
+                </select>
+                
+                <select class="area-select" name="costo_oficina" id="costo_oficina" required>
+                    <option value="" disabled selected>-- Seleccione rango de costo --</option>
+                    <option value="facil">$60 - Divisiones</option>
+                    <option value="medio">$90 - Panorámicas</option>
+                    <option value="dificil">$120 - Puertas/Fachadas</option>
+                </select>
+            </figure>
+        </div>
+        
+        <!-- Cristales en Negocios -->
+        <div id="contenedorNegocios" class="service-grid">
+            <div class="descripcion-negocio">
+                <h4>Limpieza de cristales en negocios:</h4>
+                <ul>
+                    <li><strong>Escaparates:</strong> Brillo perfecto en vitrinas de exhibición.</li>
+                    <li><strong>Puertas comerciales:</strong> Vidrios de acceso sin huellas ni polvo.</li>
+                    <li><strong>Fachadas completas:</strong> Limpieza integral de vidrio en locales comerciales.</li>
+                </ul>
+            </div>
+            <figure>
+                <img src="cristalesNegocio.jpg" alt="Limpieza de cristales en negocios" width="387" height="239">
+                <figcaption>Cristales en Negocios</figcaption>
+                
+                <select class="area-select" name="tipo_negocio" id="tipo_negocio" required>
+                    <option value="" disabled selected>-- Seleccione tipo de cristal --</option>
+                    <option value="escaparates">Escaparates</option>
+                    <option value="puertas_comerciales">Puertas comerciales</option>
+                    <option value="fachadas">Fachadas completas</option>
+                </select>
+                
+                <select class="area-select" name="costo_negocio" id="costo_negocio" required>
+                    <option value="" disabled selected>-- Seleccione rango de costo --</option>
+                    <option value="facil">$70 - Escaparates</option>
+                    <option value="medio">$120 - Puertas comerciales</option>
+                    <option value="dificil">$200 - Fachadas completas</option>
+                </select>
+            </figure>
+        </div>
+        
+        <!-- Botón de envío -->
+        <div class="submit-container">
+            <button type="submit" id="enviarBtn">Solicitar Servicio</button>
+        </div>
+        
+      </form>
+    </main>
+</body>
+</html>

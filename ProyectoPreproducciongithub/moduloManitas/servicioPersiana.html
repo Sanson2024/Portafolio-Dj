@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios Profesionales de Pintura</title>
+   <link rel="stylesheet" href="etiloservpintar.css">
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <img src="multis.jpg" alt="Servicios profesionales de pintura y remodelación">
+        </div>
+        <nav>
+            <a href="principi.html" class="nav-btn">Inicio</a>
+            <h1>Bienvenido al área de Instalcion de Persina</h1>
+        </nav>
+    </header>
+    
+    <main>
+      <form id="solicitudForm" action="procesar.php" method="POST">
+    <div id="contenedorPersianas" class="service-grid">
+        <!-- Instalación de Persianas -->
+        <figure>
+            <img src="mujer-persianas-.jpg" alt="Instalación de persianas" width="387" height="239">
+            <figcaption>Instalación de Persianas en Ventanas</figcaption>
+            <!-- Selección de área de la casa -->
+           
+            <select class="area-select" name="area_persiana" id="area_persiana" required>
+                <option value="" disabled selected>-- Seleccione área --</option>
+                <optgroup label="Área de Casa">
+                    <option value="sala">Sala de estar</option>
+                    <option value="comedor">Comedor</option>
+                    <option value="habitacion_principal">Habitación principal</option>
+                    <option value="cuartos">Habitaciones secundarias (cuartos)</option>
+                    <option value="cocina">Cocina</option>
+                    <option value="baño">Baño</option>
+                    <option value="pasillo">Pasillo</option>
+                    <option value="estudio">Estudio u oficina</option>
+                    <option value="escaleras">Escaleras</option>
+                    <option value="atico">Ático</option>
+                    <option value="fachada">Fachada</option>
+                    <option value="sotano">Bajo o sótano</option>
+                </optgroup>
+            </select>
+
+            <!-- Selección del tamaño de persiana -->
+           
+            <select class="area-select" name="tamano_persiana" id="tamano_persiana" required>
+                <option value="" disabled selected>-- Seleccione tamaño --</option>
+                <optgroup label="Tamaños de Persiana">
+                    <option value="pequena">Pequeña (60 - 120 cm)</option>
+                    <option value="mediana">Mediana (120 - 150 cm)</option>
+                    <option value="grande">Grande (150 - 200+ cm)</option>
+                </optgroup>
+            </select>
+        </figure>
+    </div>
+
+
+
+    <div id="contenedorPersianasNegocio" class="service-grid">
+        <!-- Instalación de Persianas en Oficinas o Negocios -->
+        <figure>
+            <img src="imagenpintar/oficina.jpg" alt="Instalación de persianas en oficina o negocio" width="387" height="239">
+            <figcaption>Instalación de Persianas en Oficina o Negocio</figcaption>
+
+            <!-- Selección del área del negocio -->
+            
+            <select class="area-select" name="area_negocio" id="area_negocio" required>
+                <option value="" disabled selected>-- Seleccione área --</option>
+                <optgroup label="Área de Oficina/Negocio">
+                    <option value="recepcion">Recepción</option>
+                    <option value="oficina_privada">Oficina privada</option>
+                    <option value="sala_reuniones">Sala de reuniones</option>
+                    <option value="espacio_abierto">Espacio abierto (open office)</option>
+                    <option value="cocina_oficina">Cocina o comedor</option>
+                    <option value="baño">Baño</option>
+                    <option value="almacen">Almacén o bodega</option>
+                    <option value="pasillos">Pasillos</option>
+                    <option value="area_cliente">Área de atención al cliente</option>
+                    <option value="vitrina">Vitrina o escaparate</option>
+                    <option value="showroom">Showroom</option>
+                    <option value="sala_espera">Sala de espera</option>
+                </optgroup>
+            </select>
+
+            <!-- Selección del tamaño de persiana -->
+            
+            <select class="area-select" name="tamano_persiana_negocio" id="tamano_persiana_negocio" required>
+                <option value="" disabled selected>-- Seleccione tamaño --</option>
+                <optgroup label="Tamaños de Persiana">
+                    <option value="pequena">Pequeña (60 - 120 cm)</option>
+                    <option value="mediana">Mediana (120 - 150 cm)</option>
+                    <option value="grande">Grande (150 - 200+ cm)</option>
+                </optgroup>
+            </select>
+        </figure>
+    </div>
+  <div class="submit-container">
+                <button type="submit" id="enviarBtn">Enviar</button>
+            </div>
+</form>
+
+    </main>
+
+    
+</body>
+</html>
